@@ -1,5 +1,5 @@
 app.directive("homeCard", function() {
     return {
-      templateUrl: "/app/home/homeCard.html"
+      templateUrl: "app/home/homeCard.html"
     };
   });

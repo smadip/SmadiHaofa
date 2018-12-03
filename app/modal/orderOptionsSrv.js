@@ -10,9 +10,9 @@ app.factory("orderOptionsSrv", function ($q, $http) {
 
     function getOrderOptions() {
         var async = $q.defer();
-        var orderOptions = {};
+        var orderOptions = [];
 
-        var getOrderOptionsURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa";
+        var getOrderOptionsURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/homeCards";
 
         $http.get(getOrderOptionsURL).then(function (response) {
             for (var i = 0; i < response.data.length; i++) {
