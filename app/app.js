@@ -7,4 +7,8 @@ app.config(function ($routeProvider) {
             templateUrl: "app/home/home.html",
             controller: "homeCardCtrl"
         })
+        .when("/order", {
+            templateUrl: "app/order/order.html",
+            controller: "orderCtrl"
+        })        
 })

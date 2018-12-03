@@ -6,6 +6,7 @@ app.factory("orderOptionsSrv", function ($q, $http) {
         this.name = orderOption.name;
         this.description = orderOption.description;
         this.imgUrl = orderOption.imgUrl;
+        this.pageLink = orderOption.pageLink;
     }
 
     function getOrderOptions() {

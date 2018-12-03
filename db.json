@@ -20,19 +20,22 @@
             "id": 1,
             "name": "סדנאות אפייה",
             "description": "הזמנת סדנאות אפייה פרטיות ליום הולדת, גיבוש או כל אירוע משמח",            
-            "imgUrl": "assets/bakingWorkshops.jpg"            
+            "imgUrl": "assets/bakingWorkshops.jpg",
+            "pageLink":"#"            
         },
         {
             "id": 2,
             "name": "עוגות מעוצבות",
             "description": "עוגות מעוצבות לפי הזמנה אישית",
-            "imgUrl": "assets/designCake.jpg"
+            "imgUrl": "assets/designCake.jpg",
+            "pageLink":"#"                        
         },
         {
             "id": 3,
             "name": "ממאפים מתוקים ולמלוחים",
             "description": "הזמנת קינוחים ומאפים לכל אירוע",
-            "imgUrl": "assets/specialOrder.JPG"
-        }                 
+            "imgUrl": "assets/specialOrder.JPG",
+            "pageLink":"#!/order"                        
+        }                            
     ]
 }
