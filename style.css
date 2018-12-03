@@ -1,0 +1,10 @@
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: 'Varela Round', sans-serif;
+    }
+
+.jumbotron{
+    color: #FFFFFF;
+    background: linear-gradient(to right, #24c6dc, #514a9d);
+    }

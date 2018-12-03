@@ -1,0 +1,38 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "fname": "Nir",
+            "lname": "Channes",
+            "email": "nir@nir.com",
+            "pwd": "123"
+        },
+        {
+            "id": 2,
+            "fname": "John",
+            "lname": "Doe",
+            "email": "john@john.com",
+            "pwd": "123"
+        }
+    ],
+    "homeCards": [
+        {
+            "id": 1,
+            "name": "סדנאות אפייה",
+            "description": "הזמנת סדנאות אפייה פרטיות ליום הולדת, גיבוש או כל אירוע משמח",            
+            "imgUrl": "https://photos.google.com/photo/AF1QipNo62Ceu4OyOE31eBgThPKbzeZywgW2cu1LMZI0"            
+        },
+        {
+            "id": 2,
+            "name": "עוגות מעוצבות",
+            "description": "עוגות מעוצבות לפי הזמנה אישית",
+            "imgUrl": "https://photos.google.com/photo/AF1QipPe4tZFbYw9wSZPzuJxv9dq9PqGw8P1t1lvC7-q"
+        },
+        {
+            "id": 3,
+            "name": "ממאפים מתוקים ולמלוחים",
+            "description": "הזמנת קינוחים ומאפים לכל אירוע",
+            "imgUrl": "https://photos.google.com/photo/AF1QipN1WnDiEriXhW85xjOGFYrINudjbetFFnN7G6Il"
+        }                 
+    ]
+}
