@@ -49,14 +49,16 @@
                     "name": "בורקיטס",
                     "description": "מאפה בצק פריך ממולא בתערובת גבינות מובחרות",
                     "price": 10,
-                    "foodTypeId": 1
+                    "foodTypeId": 1,
+                    "imgUrl":"assets/designCake.jpg"
                 },
                 {
                     "id": 2,
                     "name": "שבלולי פיצה",
                     "description": "בצק פריך ממולא ברוטב עגבניות,גבינה ופלפל צהוב",
                     "price": 20,
-                    "foodTypeId": 1
+                    "foodTypeId": 1,
+                    "imgUrl":"assets/designCake.jpg"
                 }
             ]
         },
@@ -70,14 +72,16 @@
                     "name": "מארז של 6 יחידות פאי שוקולד אישי",
                     "description": "פאי בצק פריך ממולא בגאנש שוקולד עם 60% מוצקי קקאו",
                     "price": 30,
-                    "foodTypeId": "2"
+                    "foodTypeId": "2",
+                    "imgUrl":"assets/designCake.jpg"
                 },
                 {
                     "id": 4,
                     "name": "מארז של 10 פטיפורים",
                     "description": "פטיפורים במילואים שונים ומטריפים",
                     "price": 40,
-                    "foodTypeId": "2"
+                    "foodTypeId": "2",
+                    "imgUrl":"assets/designCake.jpg"
                 }
             ]
         },
@@ -91,14 +95,16 @@
                     "name": "עוגת טריקולד",
                     "description": "עוגת מוס 3 שכבות",
                     "price": 50,
-                    "foodTypeId": "3"
+                    "foodTypeId": "3",
+                    "imgUrl":"assets/designCake.jpg"
                 },
                 {
                     "id": 6,
                     "name": "עוגת בנופי",
                     "description": "עוגת קרם שמנת בננות ושכבת טופי",
                     "price": 60,
-                    "foodTypeId": "3"
+                    "foodTypeId": "3",
+                    "imgUrl":"assets/designCake.jpg"
                 }
             ]
         },
@@ -112,14 +118,16 @@
                     "name": "מארז עוגיות תמרים",
                     "description": "עוגיות בצק פריך מגולגלות וממולאות בממרח תמרים",
                     "price": 70,
-                    "foodTypeId": "4"
+                    "foodTypeId": "4",
+                    "imgUrl":"assets/designCake.jpg"
                 },
                 {
                     "id": 8,
                     "name": "מארז עוגיות סנדוויץ ריבת תות",
                     "description": "עוגיות בצק פריך ממולאות בריבת תות איכותית ",
                     "price": 80,
-                    "foodTypeId": "4"
+                    "foodTypeId": "4",
+                    "imgUrl":"assets/designCake.jpg"
                 }
             ]
         }

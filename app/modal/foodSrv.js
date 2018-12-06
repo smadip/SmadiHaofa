@@ -6,6 +6,7 @@ app.factory("foodSrv", function ($q, $http) {
         this.name = food.name;  
         this.idName =food.idName;
         this.foodOptions = food.foodOptions;
+        this.imgUrl = food.imgUrl;
     }
 
     function getFoods() {
