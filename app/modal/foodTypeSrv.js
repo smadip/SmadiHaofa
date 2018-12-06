@@ -3,7 +3,8 @@ app.factory("foodTypeSrv", function ($q, $http) {
 
     function FoodType(foodType) {
         this.id = foodType.id;
-        this.name = foodType.name
+        this.name = foodType.name;  
+        this.idName =foodType.idName;
     }
 
     function getFoodTypes() {

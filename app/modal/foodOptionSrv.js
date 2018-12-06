@@ -3,11 +3,11 @@ app.factory("foodOptionSrv", function ($q, $http) {
 
     function FoodOption(foodOption) {
         this.id = foodOption.id;
-        this.name = foodOption.name
-        this.description = foodOption.description
-        this.imgUrl = foodOption.imgUrl
-        this.price = foodOption.price
-        this.foodTypeId = foodOption.foodTypeId
+        this.name = foodOption.name;
+        this.description = foodOption.description;
+        // this.imgUrl = foodOption.imgUrl;
+        this.price = foodOption.price;
+        this.foodTypeId = foodOption.foodTypeId;
     }
 
     function getFoodOptions(foodType) {
