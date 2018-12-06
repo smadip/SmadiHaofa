@@ -1,20 +1,21 @@
-app.controller("foodOrderCtrl", function ($scope, foodTypeSrv, foodOptionSrv) {
-    // $scope.selectedFoodType = $scope.selectedFoodType;
+app.controller("foodOrderCtrl", function ($scope, foodSrv) {
 
-    foodTypeSrv.getFoodTypes().then(function (options) {
-        $scope.foodTypes = options;
+    // $scope.selectedFoodType = null;
+
+    foodSrv.getFoods().then(function (options) {
+        $scope.foods = options;
     }, function (error) {
 
-    })
-
-    foodOptionSrv.getFoodOptions($scope.selectedFoodType).then(function (options) {
-        $scope.foodOptions = options;
-    }, function (error) {
-
-    })
+    })    
 
     // $scope.setSelectedFoodType = function (foodType) {
     //     $scope.selectedFoodType = foodType;
+
+    //     foodOptionSrv.getFoodOptions($scope.selectedFoodType).then(function (options) {
+    //         $scope.foodOptions = options;
+    //     }, function (error) {
+    
+    //     })
     // }
 
 });

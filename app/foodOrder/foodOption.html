@@ -1,7 +1,8 @@
-<div class="custom-control custom-checkbox mb-3" ng-repeat="food in foodOptions">
-    <input type="checkbox" class="custom-control-input" id={{food.id}} name="checkboxFood" ng-click="onSelectFood($event,food)">
-    <label class="custom-control-label" for={{food.id}}>{{food.name}}</label>
-    <label class="custom-control-label" for={{food.id}}>{{food.description}}</label>
-    <label class="custom-control-label" for={{food.id}}>{{food.price}}</label>
+<div class="custom-control custom-checkbox mb-3 checkbox" ng-repeat="food in foods.foodOptions track by $index ">
+    <input type="checkbox" class="custom-control-input" id={{food.id}} name="Food{{food.id}}{{ $index}}">
+    <label class="custom-control-label" for={{food.id}}{{$index}}>{{food.name}}</label>
+    
+    <!-- <label class="custom-control-label">{{food.description}}</label>
+    <label class="custom-control-label">{{food.price}}</label> -->
     <!-- <img class="h-100" src="{{food.imgUrl}}" alt="{{food.name}}"> -->
 </div>

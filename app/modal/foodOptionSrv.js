@@ -19,7 +19,7 @@ app.factory("foodOptionSrv", function ($q, $http) {
         $http.get(getFoodOptionsURL).then(function (response) {
 
             for (var i = 0; i < response.data.length; i++) {
-                if (response.data[i].foodTypeId == foodType) {
+                if (response.data[i].foodTypeId == foodType.id) {
                     var foodOption = new FoodOption(response.data[i]);
                     foodOptions.push(foodOption);
                 }
