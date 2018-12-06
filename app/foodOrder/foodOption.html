@@ -1,4 +1,4 @@
-<div class="custom-control custom-checkbox mb-3 checkbox" ng-repeat="food in foods.foodOptions track by $index ">
+<div class="custom-control custom-checkbox mb-3 checkbox" ng-repeat="food in food.foodOptions track by $index ">
     <input type="checkbox" class="custom-control-input" id={{food.id}} name="Food{{food.id}}{{ $index}}">
     <label class="custom-control-label" for={{food.id}}{{$index}}>{{food.name}}</label>
     

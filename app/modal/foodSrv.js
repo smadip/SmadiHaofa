@@ -17,7 +17,7 @@ app.factory("foodSrv", function ($q, $http) {
         $http.get(getFoodsURL).then(function (response) {
             for (var i = 0; i < response.data.length; i++) {
                 var food = new Food(response.data[i]);
-                food.push(foodType);
+                foods.push(food);
             }
             async.resolve(foods);
         }, function (error) {
