@@ -1,5 +1,5 @@
 app.directive("foodOption", function() {
     return {
-      templateUrl: "app/order/foodOption.html"
+      templateUrl: "app/foodOrder/foodOption.html"
     };
   });

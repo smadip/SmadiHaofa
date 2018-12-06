@@ -1,7 +1,7 @@
-app.controller("orderCtrl", function ($scope, orderSrv, foodOptionSrv) {
+app.controller("foodOrderCtrl", function ($scope, foodTypeSrv, foodOptionSrv) {
     $scope.foodType = null;
 
-    orderSrv.getFoodTypes().then(function (options) {
+    foodTypeSrv.getFoodTypes().then(function (options) {
         $scope.foodTypes = options;
     }, function (error) {
 
