@@ -1,6 +1,6 @@
 <div class="custom-control custom-checkbox mb-3 checkbox" ng-repeat="food in food.foodOptions">
     <input type="checkbox" class="custom-control-input" id={{food.id}} name="Food{{food.id}}">
-    <label class="custom-control-label" for={{food.id}}>{{food.name}} | {{food.description}} | {{food.price}} ש"ח | {{food.imgUrl}}</label>    
-   
-    <!-- <img class="h-100" src="{{food.imgUrl}}" alt="{{food.name}}"> -->
+    <label class="custom-control-label" for={{food.id}}>{{food.name}} | {{food.description}} | {{food.price}} ש"ח |</label>       
+    <img class="smallImg rounded" ng-src="{{food.imgUrl}}" alt="{{food.name}}">
+    <input class="inputNum" type="number" id="{{food.id}}" min= "0" value="0" ng-model="amount">
 </div>

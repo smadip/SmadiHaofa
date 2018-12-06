@@ -20,3 +20,11 @@ body{
       right: 0;
       left: auto;
     }
+
+    .smallImg{
+        width: 5%
+    }
+
+    .inputNum{
+        width: 5%;
+    }
