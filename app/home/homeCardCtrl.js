@@ -1,6 +1,6 @@
-app.controller("homeCardCtrl", function ($scope, orderOptionsSrv, $routeParams) {
+app.controller("homeCardCtrl", function ($scope, homeCardSrv, $routeParams) {
     
-    orderOptionsSrv.getOrderOptions().then(function (options) {
+    homeCardSrv.getHomeCardOptions().then(function (options) {
         $scope.homeCards = options;
     }, function(error) {
         

@@ -19,23 +19,107 @@
         {
             "id": 1,
             "name": "סדנאות אפייה",
-            "description": "הזמנת סדנאות אפייה פרטיות ליום הולדת, גיבוש או כל אירוע משמח",            
+            "description": "הזמנת סדנאות אפייה פרטיות ליום הולדת, גיבוש או כל אירוע משמח",
             "imgUrl": "assets/bakingWorkshops.jpg",
-            "pageLink":"#"            
+            "pageLink": "#"
         },
         {
             "id": 2,
             "name": "עוגות מעוצבות",
             "description": "עוגות מעוצבות לפי הזמנה אישית",
             "imgUrl": "assets/designCake.jpg",
-            "pageLink":"#"                        
+            "pageLink": "#"
         },
         {
             "id": 3,
             "name": "ממאפים מתוקים ולמלוחים",
             "description": "הזמנת קינוחים ומאפים לכל אירוע",
             "imgUrl": "assets/specialOrder.JPG",
-            "pageLink":"#!/order"                        
-        }                            
+            "pageLink": "#!/order"
+        }
+    ],
+    "foodTypes": [
+        {
+            "id": 1,
+            "name": "מאפים מלוחים"
+        },
+        {
+            "id": 2,
+            "name": "מאפים מתוקים"
+        },
+        {
+            "id": 3,
+            "name": "עוגות"
+        },
+        {
+            "id": 4,
+            "name": "עוגיות"
+        }
+    ],
+    "foodOptions": [
+        {
+            "id": 1,
+            "name": "בורקיטס",
+            "description": "מאפה בצק פריך ממולא בתערובת גבינות מובחרות",
+            "imgUrl": "assets/bakingWorkshops.jpg",
+            "price": 10,
+            "foodTypeId": 1
+        },
+        {
+            "id": 2,
+            "name": "שבלולי פיצה",
+            "description": "בצק פריך ממולא ברוטב עגבניות,גבינה ופלפל צהוב",
+            "imgUrl": "assets/designCake.jpg",
+            "price": 20,
+            "foodTypeId": 1
+        },
+        {
+            "id": 3,
+            "name": "מארז של 6 יחידות פאי שוקולד אישי",
+            "description": "פאי בצק פריך ממולא בגאנש שוקולד עם 60% מוצקי קקאו",
+            "imgUrl": "assets/specialOrder.JPG",
+            "price": 30,
+            "foodTypeId": "2"
+        },
+        {
+            "id": 4,
+            "name": "מארז של 10 פטיפורים",
+            "description": "פטיפורים במילואים שונים ומטריפים",
+            "imgUrl": "assets/specialOrder.JPG",
+            "price": 40,
+            "foodTypeId": "2"
+        },
+        {
+            "id": 5,
+            "name": "עוגת טריקולד",
+            "description": "עוגת מוס 3 שכבות",
+            "imgUrl": "assets/specialOrder.JPG",
+            "price": 50,
+            "foodTypeId": "3"
+        },
+        {
+            "id": 6,
+            "name": "עוגת בנופי",
+            "description": "עוגת קרם שמנת בננות ושכבת טופי",
+            "imgUrl": "assets/specialOrder.JPG",
+            "price": 60,
+            "foodTypeId": "3"
+        },
+        {
+            "id": 7,
+            "name": "מארז עוגיות תמרים",
+            "description": "עוגיות בצק פריך מגולגלות וממולאות בממרח תמרים",
+            "imgUrl": "assets/specialOrder.JPG",
+            "price": 70,
+            "foodTypeId": "4"
+        },
+        {
+            "id": 8,
+            "name": "מארז עוגיות סנדוויץ ריבת תות",
+            "description": "עוגיות בצק פריך ממולאות בריבת תות איכותית ",
+            "imgUrl": "assets/specialOrder.JPG",
+            "price": 80,
+            "foodTypeId": "4"
+        }
     ]
 }

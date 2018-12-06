@@ -8,7 +8,7 @@ app.config(function ($routeProvider) {
             controller: "homeCardCtrl"
         })
         .when("/order", {
-            templateUrl: "app/order/order.html",
-            controller: "orderCtrl"
+            templateUrl: "app/foodOrder/foodOrder.html",
+            controller: "foodOrderCtrl"
         })        
 })
