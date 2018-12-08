@@ -7,8 +7,12 @@ app.config(function ($routeProvider) {
             templateUrl: "app/home/home.html",
             controller: "homeCardCtrl"
         })
-        .when("/order", {
+        .when("/foodOrder", {
             templateUrl: "app/foodOrder/foodOrder.html",
             controller: "foodOrderCtrl"
         })        
+        .when("/Order", {
+            templateUrl: "app/order/order.html",
+            controller: "orderCtrl"
+        })
 })

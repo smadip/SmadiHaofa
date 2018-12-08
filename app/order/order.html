@@ -1,0 +1,33 @@
+<form>
+    <h1>ביצוע הזמנה</h1>
+    <div class="form-group">
+                <label for="foodDetails">פירוט ההזמנה</label>
+                <select multiple class="form-control" id="foodDetails" ng-repeat= "foodOption in order.foodOrder">
+                    <option>{{foodOption.name}} | {{foodOption.description}} | {{foodOption.price}} ש"ח</option>
+                </select>
+            </div>
+    <div class="form-group">
+        <label for="fullName">שם מלא</label>
+        <input type="text" class="form-control" id="fullName" placeholder="enter you full name">
+    </div>
+    <div class="form-group">
+        <label for="email">:כתובת אימייל</label>
+        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+        <label for="phone">טלפון</label>
+        <input type="tel" class="form-control" id="phone" value="(972)50-555-5555">
+    </div>
+    <div class="form-group row">
+            <label for="orderDate" class="col-2 col-form-label">תאריך אספקה:</label>
+            <div class="col-10">
+              <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="orderDate">
+            </div>
+          </div>
+    <div class="form-group">
+        <label for="remark">הערות</label>
+        <textarea class="form-control" id="remark" rows="3"></textarea>
+    </div>
+    <button type="button" class="btn btn-outline-primary" ng-click="setOrderDetails()">בצע הזמנה</button>
+
+</form>

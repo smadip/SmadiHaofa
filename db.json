@@ -35,7 +35,7 @@
             "name": "ממאפים מתוקים ולמלוחים",
             "description": "הזמנת קינוחים ומאפים לכל אירוע",
             "imgUrl": "assets/specialOrder.JPG",
-            "pageLink": "#!/order"
+            "pageLink": "#!/foodOrder"
         }
     ],
     "food": [
