@@ -14,7 +14,9 @@ app.factory("orderSrv", function ($q, $http) {
         this.fullName = "";
         this.phone = "";
         this.email = "";
-        this.foodOrder = {};
+        this.foodOrder = [];
+        return this;
+
     }
 
 

@@ -11,7 +11,7 @@ app.config(function ($routeProvider) {
             templateUrl: "app/foodOrder/foodOrder.html",
             controller: "foodOrderCtrl"
         })        
-        .when("/Order", {
+        .when("/order", {
             templateUrl: "app/order/order.html",
             controller: "orderCtrl"
         })

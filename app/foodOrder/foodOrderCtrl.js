@@ -19,7 +19,7 @@ app.controller("foodOrderCtrl", function ($scope, foodSrv,orderSrv) {
             }
         }
         orderSrv.setOrder(order);
-        window.location = "#/order.html";
+        window.location = "#!/order";
     }
 
     // $scope.onSelectFoodOption = function (event, foodOption) {
