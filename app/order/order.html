@@ -1,5 +1,6 @@
 <form class="container">
-    <h1>ביצוע הזמנה</h1>
+    <div id="orderId">
+    <h1>סיכום&#160;הזמנה</h1>
     <div class="form-group">
                 <label for="foodDetails">פירוט ההזמנה:</label>
                 <select multiple class="form-control" id="foodDetails">
@@ -7,12 +8,12 @@
                 </select>
             </div>
     <div class="form-group">
-        <label for="fullName">שם מלא:</label>
+        <label for="fullName">שם&#160;מלא:</label>
         <input type="text" class="form-control" id="fullName" placeholder="enter you full name">
     </div>
     <div class="form-group">
         <label for="email">כתובת אימייל:</label>
-        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        <input type="email" class="form-control" id="email" ng-model="userEmail" value="userEmail" placeholder="name@example.com">
     </div>
     <div class="form-group">
         <label for="phone">טלפון:</label>
@@ -28,6 +29,7 @@
         <label for="remark">הערות:</label>
         <textarea class="form-control" id="remark" rows="3"></textarea>
     </div>
-    <button type="button" class="btn btn-outline-primary" ng-click="setOrderDetails()">בצע הזמנה</button>
-
+</div>
+    
+    <button type="button" class="btn btn-outline-primary" ng-click="createPdf()">בצע הזמנה</button>
 </form>
