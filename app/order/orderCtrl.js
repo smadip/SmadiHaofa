@@ -12,12 +12,20 @@ app.controller("orderCtrl", function ($scope, orderSrv) {
         };
 
         //var x = html2pdf(element);
-        var worker = html2pdf().set(opt).from(element).toPdf().then(function() {
-            console.log(arguments);
-            orderSrv.sendEmail("toname","message");
-        })
-
-        // window.open('mailto:userEmail');
+        var worker = html2pdf().set(opt).from(element).toPdf().save();
         // var worker = html2pdf().from(element).toPdf().save("sdsd");
+    }
+
+    $scope.SendMail = function(){
+        
+        // $scope.createPdf();
+
+        $scope.order.fullName = document.getElementById('fullName').value;
+        $scope.order.phone = document.getElementById('phone').value;
+        $scope.order.email = document.getElementById('email').value;
+        $scope.order.remarkData = document.getElementById('remark').value;
+        $scope.order.date = document.getElementById('orderDate').value;
+
+        orderSrv.sendEmail($scope.order);
     }
 });
