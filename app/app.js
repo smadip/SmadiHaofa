@@ -15,4 +15,8 @@ app.config(function ($routeProvider) {
             templateUrl: "app/order/order.html",
             controller: "orderCtrl"
         })
+        .when("/workShop", {
+            templateUrl: "app/workShop/workShop.html",
+            controller: "workShopCtrl"
+        })
 })
