@@ -4,6 +4,7 @@ app.factory("workShopSrv", function ($q, $http) {
     function WorkShop(workShop) {
         this.id = workShop.id;
         this.date = workShop.date;
+        this.name = workShop.name;
         this.description = workShop.description;
         this.numberOfChilds = workShop.numberOfChilds;
         this.parentName = workShop.parentName;

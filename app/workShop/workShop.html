@@ -1,21 +1,22 @@
 <form class="container">
+  <h1>טופס הרשמה לסדנה</h1><br>
         <div class="dropdown">
-            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
               בחר סדנה:
             </button>
             <div class="dropdown-menu dropdown-menu-right" >
-              <a class="dropdown-item"  ng-repeat= "workShop in workShops" ng-click="setSelectedWorkShop(workShop)" href="#">{{workShop.name}}</a>
+              <a class="dropdown-item"  ng-repeat= "workShop in workShops" ng-click="setSelectedWorkShop(workShop)">{{workShop.name}}</a>
             </div>
           </div>
           <div class="form-group">
             <label for="remark">פירוט תוכן הסדנה:</label>
-            <textarea class="form-control" id="remark" rows="3" ng-show="selectedWorkShope != null"> {{selectedWorkShop}}</textarea>
+            <textarea class="form-control" id="remark" rows="3"> {{selectedWorkShop.description}}</textarea>
         </div>
     <div class="form-group">
       <label for="numOfChildrens">מספר ילדים </label>
       <input class="inputNum" type="number" id="numOfChildrens" min= "0">
     </div>
-    <div class="px-20 bg-info">פרטיי ההורים</div>
+    <div class="px-20 bg-primary">פרטיי ההורים</div><br>
 
     <div class="form-group">
         <label for="fullName">שם&#160;מלא:</label>
@@ -29,5 +30,5 @@
         <label for="phone">טלפון:</label>
         <input type="tel" class="form-control" id="phone" placeholder="050-5555555">
     </div>
-    <button type="button" class="btn btn-outline-primary" ng-click="SendRegistrationMail()"></button>הרשם</button>
+    <button type="button" class="btn btn-outline-primary" ng-click="SendRegistrationMail()">הרשם</button>
   </form>
