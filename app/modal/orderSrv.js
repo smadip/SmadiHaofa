@@ -31,31 +31,7 @@ app.factory("orderSrv", function ($q, $http) {
     function getOrder() {
         return order;
     }
-
-    // function sendEmail(toName, messageBody){
-
-    //     var data = {
-    //         service_id: 'smadihaofamail',
-    //         template_id: 'template_gwPZtv05',
-    //         user_id: 'user_fyF2Chmi4cHyELTYkGTcw',
-    //         template_params: {
-    //             'to_name': toName,
-    //             'message_html': messageBody,
-    //             'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
-    //         }
-    //     };
-
-    //     $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-    //         type: 'POST',
-    //         data: JSON.stringify(data),
-    //         contentType: 'application/json'
-    //     }).done(function() {
-    //         alert('Your mail is sent!');
-    //     }).fail(function(error) {
-    //         alert('Oops... ' + JSON.stringify(error));
-    //     });
-    // }
-
+  
     function sendEmail(order) {
 
         var orderDeails = '';
@@ -77,8 +53,23 @@ app.factory("orderSrv", function ($q, $http) {
         emailjs.send(service_id, template_id, template_params);
     }
 
+    function createPdf (orderElement) {
+        var opt = {
+            margin: 1,
+            filename: 'myOrder.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        //var x = html2pdf(element);
+        var worker = html2pdf().set(opt).from(orderElement).toPdf().save();
+        // var worker = html2pdf().from(element).toPdf().save("sdsd");
+    }
+
     return {
         setOrder: setOrder,
+        createPdf:createPdf,
         getOrder: getOrder,
         Order: Order,
         sendEmail: sendEmail
