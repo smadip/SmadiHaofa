@@ -1,0 +1,33 @@
+<form class="container">
+        <div class="dropdown">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+              בחר סדנה:
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" >
+              <a class="dropdown-item"  ng-repeat= "workShop in workShops" ng-click="setSelectedWorkShop(workShop)" href="#">{{workShop.name}}</a>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="remark">פירוט תוכן הסדנה:</label>
+            <textarea class="form-control" id="remark" rows="3" ng-show="selectedWorkShope != null"> {{selectedWorkShop}}</textarea>
+        </div>
+    <div class="form-group">
+      <label for="numOfChildrens">מספר ילדים </label>
+      <input class="inputNum" type="number" id="numOfChildrens" min= "0">
+    </div>
+    <div class="px-20 bg-info">פרטיי ההורים</div>
+
+    <div class="form-group">
+        <label for="fullName">שם&#160;מלא:</label>
+        <input type="text" class="form-control" id="fullName" placeholder="enter you full name">
+    </div>
+    <div class="form-group">
+        <label for="email">כתובת אימייל:</label>
+        <input type="email" class="form-control" id="email" ng-model="userEmail" value="userEmail" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+        <label for="phone">טלפון:</label>
+        <input type="tel" class="form-control" id="phone" placeholder="050-5555555">
+    </div>
+    <button type="button" class="btn btn-outline-primary" ng-click="SendRegistrationMail()"></button>הרשם</button>
+  </form>
