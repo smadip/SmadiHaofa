@@ -6,11 +6,15 @@ app.factory("workShopSrv", function ($q, $http) {
         this.date = workShop.date;
         this.name = workShop.name;
         this.description = workShop.description;
-        this.numberOfChilds = workShop.numberOfChilds;
-        this.parentName = workShop.parentName;
-        this.parentPhone = workShop.parentPhone;
-        this.parentEmail = workShop.parentEmail;
-        this.selectedWorkShop = workShop.selectedWorkShop;
+        
+    }
+
+    function WorkShopRegistration(workShopRegistration){
+        this.numberOfChilds = workShopRegistration.numberOfChilds;
+        this.parentName = workShopRegistration.parentName;
+        this.parentPhone = workShopRegistration.parentPhone;
+        this.parentEmail = workShopRegistration.parentEmail;
+        this.selectedWorkShop = workShopRegistration.selectedWorkShop;
     }
 
     function getWorkShopOptions() {

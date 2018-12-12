@@ -1,4 +1,4 @@
-app.controller("workShopCtrl", function ($scope, workShopSrv) {
+app.controller("workShopCtrl", function ($scope, workShopSrv,workShopRegistrationSrv) {
     $scope.selectedWorkShop = null;
 
     $scope.setSelectedWorkShop = function(workShop){
@@ -21,8 +21,15 @@ app.controller("workShopCtrl", function ($scope, workShopSrv) {
         //after login  show admin activation or user activation squer
         //admin add new workShop - see that the user can choose this work shop that just added
         //add for for order design cake
+        //add fields to workshop: price and the start and end time
 
-        $scope.selectedWorkShop
-        workShopSrv.Register();
+        $scope.workShopRegistration = workShopRegistrationSrv.WorkShopRegistration();
+        $scope.workShopRegistration.numberOfChilds = document.getElementById('numOfChildrens').value;
+        $scope.workShopRegistration.parentName = document.getElementById('fullName').value;
+        $scope.workShopRegistration.parentPhone = document.getElementById('phone').value;
+        $scope.workShopRegistration.parentEmail = document.getElementById('email').value;
+        $scope.workShopRegistration.selectedWorkShop = $scope.selectedWorkShop;
+
+        workShopRegistrationSrv.SendWorkShopRegistration($scope.workShopRegistration);
     }
 });
