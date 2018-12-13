@@ -12,16 +12,7 @@ app.controller("workShopCtrl", function ($scope, workShopSrv,workShopRegistratio
         
     })
 
-    $scope.RegisterToWorkShop = function(){
-        
-        
-        //add button save local PDF in order food
-        //Add button back in order and workshop       
-        //admin add new workShop - see that the user can choose this work shop that just added
-        //add for for order design cake
-        //add fields to workshop: price and the start and end time
-        //validation on fieldes
-
+    $scope.RegisterToWorkShop = function(){     
         $scope.workShopRegistration = workShopRegistrationSrv.WorkShopRegistration();
         $scope.workShopRegistration.numberOfChilds = document.getElementById('numOfChildrens').value;
         $scope.workShopRegistration.parentName = document.getElementById('fullName').value;
