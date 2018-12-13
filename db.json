@@ -2,16 +2,16 @@
     "users": [
         {
             "id": 1,
-            "fname": "Nir",
-            "lname": "Channes",
-            "email": "nir@nir.com",
+            "fname": "סמדר",
+            "lname": "בוכמן",
+            "email": "smadiHaofa@gmail.com",
             "pwd": "123"
         },
         {
             "id": 2,
-            "fname": "John",
-            "lname": "Doe",
-            "email": "john@john.com",
+            "fname": "מירב",
+            "lname": "לילה",
+            "email": "merav@gmail.com",
             "pwd": "123"
         }
     ],

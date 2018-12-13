@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md bg-info navbar-dark">
+    <a class="navbar-brand" href="#">סמדי האופה</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item" ng-show="isUserLoggedIn()">
+                <a class="nav-link" href="#!/AddNewWorkShop">הוספת סדנה חדשה</a>
+            </li>
+            <li class="nav-item" ng-show="isUserLoggedIn()">
+                <a class="nav-link" href="#!/ManageUsers">הוספת משתמש חדש</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" ng-hide="isUserLoggedIn()">
+                <a class="nav-link" href="#!/login">כניסה</a>
+            </li>
+            <li class="nav-item" ng-hide="isUserLoggedIn()">
+                <a class="nav-link" href="#">הרשם</a>
+            </li>
+            <li class="nav-item" ng-show="isUserLoggedIn()">
+                <a class="nav-link" href="#" ng-click="logout()">יציאה</a>
+            </li>
+        </ul>
+    </div>
+</nav>
