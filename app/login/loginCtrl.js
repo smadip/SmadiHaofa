@@ -11,7 +11,7 @@ app.controller("loginCtrl", function($scope, $location, userSrv) {
 
         userSrv.login($scope.email, $scope.pwd).then(function() {
             // success login
-            $location.path("/recipes")
+            $location.path("/")
         }, function(error) {
             // failed login
             $scope.invalidLogin = true;

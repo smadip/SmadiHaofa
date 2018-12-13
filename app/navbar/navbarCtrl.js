@@ -4,6 +4,10 @@ app.controller("navbarCtrl", function($scope, userSrv, $location) {
         return userSrv.isLoggedIn();
     }
 
+    $scope.isAdminUserLoggedIn = function() {
+        return userSrv.isAdminLoggedIn();
+    }
+
     $scope.logout = function() {
         userSrv.logout();
         $location.path("/");

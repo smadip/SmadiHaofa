@@ -9,6 +9,7 @@ app.factory("userSrv", function($q, $http) {
         this.lname = plainUser.lname;
         this.email = plainUser.email;
         this.pwd = plainUser.pwd;
+        this.role = plainUser.role;
     }
 
     function login(email, pwd) {
@@ -36,6 +37,11 @@ app.factory("userSrv", function($q, $http) {
         return activeUser ? true : false;
     }
 
+    function isAdminLoggedIn() {
+        var active =  activeUser ? true : false;
+        return active && activeUser.role == "admin"? true:false;
+    }
+   
     function logout() {
         activeUser = null;
     }
@@ -48,6 +54,7 @@ app.factory("userSrv", function($q, $http) {
         login: login,
         isLoggedIn: isLoggedIn,
         logout: logout,
-        getActiveUser: getActiveUser
+        getActiveUser: getActiveUser,
+        isAdminLoggedIn:isAdminLoggedIn
     }
 })

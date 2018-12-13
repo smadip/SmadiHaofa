@@ -5,14 +5,16 @@
             "fname": "סמדר",
             "lname": "בוכמן",
             "email": "smadiHaofa@gmail.com",
-            "pwd": "123"
+            "pwd": "123",
+            "role": "admin"
         },
         {
             "id": 2,
             "fname": "מירב",
             "lname": "לילה",
             "email": "merav@gmail.com",
-            "pwd": "123"
+            "pwd": "123",
+            "role": "user"
         }
     ],
     "workShops": [
