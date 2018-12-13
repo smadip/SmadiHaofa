@@ -7,6 +7,7 @@ app.factory("homeCardSrv", function ($q, $http) {
         this.description = homeCard.description;
         this.imgUrl = homeCard.imgUrl;
         this.pageLink = homeCard.pageLink;
+        this.role = homeCard.role;
     }
 
     function getHomeCardOptions() {

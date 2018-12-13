@@ -6,7 +6,7 @@
             "lname": "בוכמן",
             "email": "smadiHaofa@gmail.com",
             "pwd": "123",
-            "role": "admin"
+            "roleId": "1"
         },
         {
             "id": 2,
@@ -14,7 +14,7 @@
             "lname": "לילה",
             "email": "merav@gmail.com",
             "pwd": "123",
-            "role": "user"
+            "roleId": "2"
         }
     ],
     "workShops": [
@@ -37,21 +37,54 @@
             "name": "סדנאות אפייה",
             "description": "הזמנת סדנאות אפייה פרטיות ליום הולדת, גיבוש או כל אירוע משמח",
             "imgUrl": "assets/bakingWorkshops.jpg",
-            "pageLink": "#!/workShop"
+            "pageLink": "#!/workShop",
+            "roleId": "3"
         },
         {
             "id": 2,
             "name": "עוגות מעוצבות",
             "description": "עוגות מעוצבות לפי הזמנה אישית",
             "imgUrl": "assets/designCake.jpg",
-            "pageLink": "#"
+            "pageLink": "#",
+            "roleId": "3"
         },
         {
             "id": 3,
             "name": "ממאפים מתוקים ולמלוחים",
             "description": "הזמנת קינוחים ומאפים לכל אירוע",
             "imgUrl": "assets/specialOrder.JPG",
-            "pageLink": "#!/foodOrder"
+            "pageLink": "#!/foodOrder",
+            "roleId": "3"
+        },
+        {
+            "id": 3,
+            "name": "ניהול משתמשים",
+            "description": "ניהול משתמשי המערכת",
+            "imgUrl": "assets/specialOrder.JPG",
+            "pageLink": "#!/foodOrder",
+            "roleId": "1"
+        },
+        {
+            "id": 3,
+            "name": "הסדנאות שלי",
+            "description": "צפייה בסדנאות שהשתתפתי בהן",
+            "imgUrl": "assets/specialOrder.JPG",
+            "pageLink": "#!/foodOrder",
+            "roleId": "2"
+        }
+    ],
+    "role": [
+        {
+            "id": 1,
+            "type": "admin"
+        },
+        {
+            "id": 2,
+            "type": "user"
+        },
+        {
+            "id": 3,
+            "type": "all"
         }
     ],
     "food": [
@@ -66,7 +99,7 @@
                     "description": "מאפה בצק פריך ממולא בתערובת גבינות מובחרות",
                     "price": 10,
                     "foodTypeId": 1,
-                    "imgUrl":"assets/designCake.jpg"
+                    "imgUrl": "assets/designCake.jpg"
                 },
                 {
                     "id": 2,
@@ -74,7 +107,7 @@
                     "description": "בצק פריך ממולא ברוטב עגבניות,גבינה ופלפל צהוב",
                     "price": 20,
                     "foodTypeId": 1,
-                    "imgUrl":"assets/designCake.jpg"
+                    "imgUrl": "assets/designCake.jpg"
                 }
             ]
         },
@@ -89,7 +122,7 @@
                     "description": "פאי בצק פריך ממולא בגאנש שוקולד עם 60% מוצקי קקאו",
                     "price": 30,
                     "foodTypeId": "2",
-                    "imgUrl":"assets/designCake.jpg"
+                    "imgUrl": "assets/designCake.jpg"
                 },
                 {
                     "id": 4,
@@ -97,7 +130,7 @@
                     "description": "פטיפורים במילואים שונים ומטריפים",
                     "price": 40,
                     "foodTypeId": "2",
-                    "imgUrl":"assets/designCake.jpg"
+                    "imgUrl": "assets/designCake.jpg"
                 }
             ]
         },
@@ -112,7 +145,7 @@
                     "description": "עוגת מוס 3 שכבות",
                     "price": 50,
                     "foodTypeId": "3",
-                    "imgUrl":"assets/designCake.jpg"
+                    "imgUrl": "assets/designCake.jpg"
                 },
                 {
                     "id": 6,
@@ -120,7 +153,7 @@
                     "description": "עוגת קרם שמנת בננות ושכבת טופי",
                     "price": 60,
                     "foodTypeId": "3",
-                    "imgUrl":"assets/designCake.jpg"
+                    "imgUrl": "assets/designCake.jpg"
                 }
             ]
         },
@@ -135,7 +168,7 @@
                     "description": "עוגיות בצק פריך מגולגלות וממולאות בממרח תמרים",
                     "price": 70,
                     "foodTypeId": "4",
-                    "imgUrl":"assets/designCake.jpg"
+                    "imgUrl": "assets/designCake.jpg"
                 },
                 {
                     "id": 8,
@@ -143,7 +176,7 @@
                     "description": "עוגיות בצק פריך ממולאות בריבת תות איכותית ",
                     "price": 80,
                     "foodTypeId": "4",
-                    "imgUrl":"assets/designCake.jpg"
+                    "imgUrl": "assets/designCake.jpg"
                 }
             ]
         }

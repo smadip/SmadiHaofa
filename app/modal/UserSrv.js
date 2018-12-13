@@ -1,5 +1,5 @@
 
-app.factory("userSrv", function($q, $http) {
+app.factory("userSrv", function ($q, $http) {
 
     var activeUser = null;
 
@@ -17,7 +17,7 @@ app.factory("userSrv", function($q, $http) {
 
         var loginURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/users?email=" +
             email + "&pwd=" + pwd;
-        $http.get(loginURL).then(function(response) {
+        $http.get(loginURL).then(function (response) {
             if (response.data.length > 0) {
                 // success login
                 activeUser = new User(response.data[0]);
@@ -26,11 +26,27 @@ app.factory("userSrv", function($q, $http) {
                 // invalid email or password
                 async.reject("invalid email or password")
             }
-        }, function(error) {
+        }, function (error) {
             async.reject(error);
         });
 
         return async.promise;
+    }
+
+    function isRoleAllow(role) {
+        if (role == 3) return true;
+        if (role == 2) {
+            if (activeUser != null) {
+                if (activeUser.role == 2) return true;
+            }
+            return false;
+        }
+        if (role == 1) {
+            if (activeUser != null) {
+                if (activeUser.role == 1) return true;
+            }
+            return false;
+        }
     }
 
     function isLoggedIn() {
@@ -38,10 +54,10 @@ app.factory("userSrv", function($q, $http) {
     }
 
     function isAdminLoggedIn() {
-        var active =  activeUser ? true : false;
-        return active && activeUser.role == "admin"? true:false;
+        var active = activeUser ? true : false;
+        return active && activeUser.role == "admin" ? true : false;
     }
-   
+
     function logout() {
         activeUser = null;
     }
@@ -55,6 +71,7 @@ app.factory("userSrv", function($q, $http) {
         isLoggedIn: isLoggedIn,
         logout: logout,
         getActiveUser: getActiveUser,
-        isAdminLoggedIn:isAdminLoggedIn
+        isAdminLoggedIn: isAdminLoggedIn,
+        isRoleAllow:isRoleAllow
     }
 })
