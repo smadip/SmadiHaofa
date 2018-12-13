@@ -9,7 +9,7 @@ app.factory("userSrv", function ($q, $http) {
         this.lname = plainUser.lname;
         this.email = plainUser.email;
         this.pwd = plainUser.pwd;
-        this.role = plainUser.role;
+        this.roleId = plainUser.roleId;
     }
 
     function login(email, pwd) {
@@ -33,17 +33,17 @@ app.factory("userSrv", function ($q, $http) {
         return async.promise;
     }
 
-    function isRoleAllow(role) {
-        if (role == 3) return true;
-        if (role == 2) {
+    function isRoleAllow(roleId) {
+        if (roleId == 3) return true;
+        if (roleId == 2) {
             if (activeUser != null) {
-                if (activeUser.role == 2) return true;
+                if (activeUser.roleId == 2) return true;
             }
             return false;
         }
-        if (role == 1) {
+        if (roleId == 1) {
             if (activeUser != null) {
-                if (activeUser.role == 1) return true;
+                if (activeUser.roleId == 1) return true;
             }
             return false;
         }
@@ -55,7 +55,7 @@ app.factory("userSrv", function ($q, $http) {
 
     function isAdminLoggedIn() {
         var active = activeUser ? true : false;
-        return active && activeUser.role == "admin" ? true : false;
+        return active && activeUser.roleId == 1 ? true : false;
     }
 
     function logout() {

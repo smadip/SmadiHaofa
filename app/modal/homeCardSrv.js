@@ -7,7 +7,7 @@ app.factory("homeCardSrv", function ($q, $http) {
         this.description = homeCard.description;
         this.imgUrl = homeCard.imgUrl;
         this.pageLink = homeCard.pageLink;
-        this.role = homeCard.role;
+        this.roleId = homeCard.roleId;
     }
 
     function getHomeCardOptions() {
@@ -21,6 +21,8 @@ app.factory("homeCardSrv", function ($q, $http) {
                 var homeCard = new HomeCard(response.data[i]);
                 homeCards.push(homeCard);
             }
+
+            
             async.resolve(homeCards);
         }, function (error) {
             async.reject(error);
