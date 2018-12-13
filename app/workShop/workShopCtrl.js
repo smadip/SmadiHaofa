@@ -22,4 +22,14 @@ app.controller("workShopCtrl", function ($scope, workShopSrv,workShopRegistratio
 
         workShopRegistrationSrv.SendWorkShopRegistration($scope.workShopRegistration);
     }
+
+    $scope.backToHomePage = function(){
+        window.location = "#!/";
+    }
+
+    $scope.savePdf = function(){
+        var t = document.getElementById("toPdf");
+        workShopSrv.createPdf(t);
+    }
+
 });

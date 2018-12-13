@@ -1,4 +1,4 @@
-<form class="container">
+<form class="container" id="toPdf">
   <h1>טופס הרשמה לסדנה</h1><br>
         <div class="dropdown">
             <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
@@ -31,4 +31,6 @@
         <input type="tel" class="form-control" id="phone" placeholder="050-5555555">
     </div>
     <button type="button" class="btn btn-outline-primary" ng-click="RegisterToWorkShop()">הרשם</button>
+    <button type="button" class="btn btn-outline-primary" ng-click="backToHomePage()">חזור</button>
+    <button type="button" class="btn btn-outline-primary" ng-click="savePdf()">הורד קובץ הזמנה</button>
   </form>

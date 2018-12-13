@@ -22,6 +22,10 @@ app.controller("foodOrderCtrl", function ($scope, foodSrv,orderSrv) {
         window.location = "#!/order";
     }
 
+    $scope.backToHomePage = function(){
+        window.location = "#!/";
+    }
+
     // $scope.onSelectFoodOption = function (event, foodOption) {
     //     var checkbox = event.target;
 

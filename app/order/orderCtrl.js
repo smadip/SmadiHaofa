@@ -19,4 +19,9 @@ app.controller("orderCtrl", function ($scope, orderSrv) {
 
         orderSrv.sendEmail($scope.order);
     }
+
+    $scope.backToFoodOrder = function(){
+        window.location = "#!/foodOrder";
+    }
+
 });
