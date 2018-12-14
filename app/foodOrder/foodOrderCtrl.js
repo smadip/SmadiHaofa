@@ -15,6 +15,7 @@ app.controller("foodOrderCtrl", function ($scope, foodSrv,orderSrv) {
         for(var i=0;i<$scope.foods.length;i++){
             for(var j=0;j<$scope.foods[i].foodOptions.length;j++)
             if($scope.foods[i].foodOptions[j].amount>0){
+                $scope.foods[i].foodOptions[j].totalPrice = $scope.foods[i].foodOptions[j].amount * $scope.foods[i].foodOptions[j].price
                 order.foodOrder.push($scope.foods[i].foodOptions[j]);
             }
         }

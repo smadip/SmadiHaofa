@@ -10,7 +10,7 @@ app.factory("foodSrv", function ($q, $http) {
         
         food.foodOptions.forEach(foodO => {
             foodO.amount = 0;
-            
+            foodO.totalPrice = 0;
         });
     }
 

@@ -8,7 +8,7 @@ app.factory("orderSrv", function ($q, $http) {
         this.email = orderDetails.email;
         this.remarkData = orderDetails.remarkData;
         this.date = orderDetails.date;
-        this.foodOrder = food.foodOrder;
+        this.foodOrder = food.foodOrder;        
     }
 
     function Order() {
@@ -35,10 +35,12 @@ app.factory("orderSrv", function ($q, $http) {
     function sendEmail(order) {
 
         var orderDeails = '';
-        order.foodOrder.forEach(food => {
-             var temp = " שם פריט  "+food.name + "  כמות "+ food.amount +"  מחיר "+food.price;
-            orderDeails += "<div style='white-space: pre-line, direction: rtl, text-align: right'>"+temp+" </div><br>";
-        });
+        // order.foodOrder.forEach(food => {
+        //      var temp = " שם פריט  "+food.name + "  כמות "+ food.amount +"  מחיר "+food.price;
+        //     orderDeails += "<div style='white-space: pre-line, direction: rtl, text-align: right'>"+temp+" </div><br>";
+
+            orderDeails = document.getElementById("summeryFood").innerHTML;
+        // });
         var template_params = {
             "send_to": order.email,
             "to_name": order.fullName,

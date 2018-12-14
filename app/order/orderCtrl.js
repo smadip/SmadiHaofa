@@ -1,6 +1,6 @@
 app.controller("orderCtrl", function ($scope, orderSrv) {
     $scope.order = orderSrv.getOrder();
-
+    $scope.mailSent = false;
     $scope.sendPdf = function () {
         var element = document.getElementById('orderId');
         orderSrv.createPdf(element);
@@ -14,14 +14,21 @@ app.controller("orderCtrl", function ($scope, orderSrv) {
         $scope.order.remarkData = document.getElementById('remark').value;
         $scope.order.date = document.getElementById('orderDate').value;
 
+
         // var element = document.getElementById('orderId');        
         // orderSrv.createPdf(element);
 
         orderSrv.sendEmail($scope.order);
+        $scope.mailSent = true;
     }
 
-    $scope.backToFoodOrder = function(){
+    $scope.backToFoodOrder = function () {
         window.location = "#!/foodOrder";
+    }
+
+    $scope.savePdf = function () {
+        var t = document.getElementById("orderId");
+        orderSrv.createPdf(t);
     }
 
 });

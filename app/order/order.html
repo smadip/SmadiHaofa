@@ -1,36 +1,63 @@
 <form class="container">
     <div id="orderId">
-    <h1>סיכום&#160;הזמנה</h1>
-    <div class="form-group">
-                <label for="foodDetails">פירוט ההזמנה:</label>
-                <select multiple class="form-control" id="foodDetails">
-                    <option ng-repeat= "foodOption in order.foodOrder"><p><strong> כמות:</strong>{{foodOption.amount}}<strong> פירוט:</strong> {{foodOption.name}} | {{foodOption.description}} | {{foodOption.price}} ש"ח</p></option>
-                </select>
-            </div>
-    <div class="form-group">
-        <label for="fullName">שם&#160;מלא:</label>
-        <input type="text" class="form-control" id="fullName" placeholder="enter you full name">
-    </div>
-    <div class="form-group">
-        <label for="email">כתובת אימייל:</label>
-        <input type="email" class="form-control" id="email" ng-model="userEmail" value="userEmail" placeholder="name@example.com">
-    </div>
-    <div class="form-group">
-        <label for="phone">טלפון:</label>
-        <input type="tel" class="form-control" id="phone" placeholder="050-5555555">
-    </div>
-    <div class="form-group row">
+        <h1>סיכום&#160;הזמנה</h1>
+        <div class="form-group">
+            <label for="foodDetails">פירוט ההזמנה:</label>
+            <table class="table table-striped" id="summeryFood">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">שם פריט</th>
+                        <th scope="col">תאור</th>
+                        <th scope="col">כמות</th>
+                        <th scope="col">מחיר ליחידה</th>
+                        <th scope="col">מחיר סהכ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="foodOption in order.foodOrder">
+                        <th scope="row">#</th>
+                        <td>{{foodOption.name}}</td>
+                        <td>{{foodOption.description}}</td>
+                        <td>{{foodOption.amount}}</td>
+                        <td>{{foodOption.price}}</td>
+                        <td>{{foodOption.totalPrice}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="form-group">
+            <label for="fullName">שם&#160;מלא:</label>
+            <input type="text" class="form-control" id="fullName" placeholder="enter you full name">
+        </div>
+        <div class="form-group">
+            <label for="email">כתובת אימייל:</label>
+            <input type="email" class="form-control" id="email" ng-model="userEmail" value="userEmail" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="phone">טלפון:</label>
+            <input type="tel" class="form-control" id="phone" placeholder="050-5555555">
+        </div>
+        <div class="form-group row">
             <label for="orderDate" class="col-2 col-form-label">תאריך אספקה:</label>
             <div class="col-10">
-              <input class="form-control" type="datetime-local" value="2018-12-12T12:12:00" id="orderDate">
+                <input class="form-control" type="datetime-local" value="2018-12-12T12:12:00" id="orderDate">
             </div>
-          </div>
-    <div class="form-group">
-        <label for="remark">הערות:</label>
-        <textarea class="form-control" id="remark" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="remark">הערות:</label>
+            <textarea class="form-control" id="remark" rows="3"></textarea>
+        </div>
     </div>
-</div>
-    
+
     <button type="button" class="btn btn-outline-primary" ng-click="SendMail()">בצע הזמנה</button>
+    <button type="button" class="btn btn-outline-primary" ng-click="savePdf()" ng-show="mailSent">הורד קובץ הזמנה</button>
     <button type="button" class="btn btn-outline-primary" ng-click="backToFoodOrder()">חזור</button>
+    <div class="alert alert-success" ng-show="mailSent">
+        <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true" style="font-size:20px">×</span>
+        </button> -->
+        <strong>תודה על הזמנתך</strong> ההזמנה נשלחה בהצלחה
+    </div>
+
 </form>
