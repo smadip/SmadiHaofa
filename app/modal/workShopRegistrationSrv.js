@@ -1,18 +1,19 @@
 app.factory("workShopRegistrationSrv", function ($q, $http) {
     function WorkShopRegistration(workShopRegistration) {
-        this.numberOfChilds = workShopRegistration.numberOfChilds;
         this.parentName = workShopRegistration.parentName;
         this.parentPhone = workShopRegistration.parentPhone;
         this.parentEmail = workShopRegistration.parentEmail;
         this.selectedWorkShop = workShopRegistration.selectedWorkShop;
+        this.childs = workShopRegistration.childs;
+
     }
 
     function WorkShopRegistration() {
-        this.numberOfChilds = 0;
         this.parentName = "";
         this.parentPhone = "";
         this.parentEmail = "";
         this.selectedWorkShop = {};
+        this.childs = "";
         return this;
     }
 
@@ -24,7 +25,7 @@ app.factory("workShopRegistrationSrv", function ($q, $http) {
             "description": workShopRegistration.selectedWorkShop.description,
             "date": workShopRegistration.selectedWorkShop.date,
             "time": "todo",
-            "numOfChilds": workShopRegistration.numberOfChilds,
+            "childs":"<div>"+workShopRegistration.childs+"</div>",
             "parentName": workShopRegistration.parentName,
             "parentPhoneNum": workShopRegistration.parentPhone
         }

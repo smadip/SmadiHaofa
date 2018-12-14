@@ -1,43 +1,56 @@
 <form class="container">
-  
-    <h1>טופס הרשמה לסדנה</h1><br>
-    <div class="dropdown">
-      <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
-        בחר סדנה:
-      </button>
-      <div class="dropdown-menu dropdown-menu-right">
-        <a class="dropdown-item" ng-repeat="workShop in workShops" ng-click="setSelectedWorkShop(workShop)">{{workShop.name}}</a>
-      </div>
+
+  <h1>טופס הרשמה לסדנה</h1><br>
+  <div class="dropdown">
+    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
+      בחר סדנה:
+    </button>
+    <div class="dropdown-menu dropdown-menu-right">
+      <a class="dropdown-item" ng-repeat="workShop in workShops" ng-click="setSelectedWorkShop(workShop)">{{workShop.name}}</a>
     </div>
-    <div id="toPdf">
-        <div class="form-group">
-            <label for="remark">שם הסדנה:</label>
-            <input type="text" class="form-control" id="name" value="{{selectedWorkShop.name}}">
-          </div>
+  </div>
+  <div id="toPdf">
+    <div class="form-group">
+      <label for="remark">שם הסדנה:</label>
+      <input type="text" class="form-control" id="name" value="{{selectedWorkShop.name}}" readonly>
+    </div>
     <div class="form-group">
       <label for="remark">פירוט תוכן הסדנה:</label>
-      <textarea class="form-control" id="remark" rows="3"> {{selectedWorkShop.description}}</textarea>
+      <textarea class="form-control" id="remark" rows="3" readonly> {{selectedWorkShop.description}}</textarea>
     </div>
     <fieldset class="form-group scheduler-border">
-        <legend class="scheduler-border">פרטים&#160;אישיים</legend>
+      <legend class="scheduler-border">פרטים&#160;אישיים</legend>
 
-    <div class="form-group">
-      <label for="numOfChildrens">מספר ילדים </label>
-      <input class="inputNum" type="number" id="numOfChildrens" min="0">
-    </div>
-    <div class="form-group">
-      <label for="fullName">שם&#160;מלא:</label>
-      <input type="text" class="form-control" id="fullName" placeholder="הקלד שם מלא">
-    </div>
-    <div class="form-group">
-      <label for="email">כתובת אימייל:</label>
-      <input type="email" class="form-control" id="email" ng-model="userEmail" value="userEmail" placeholder="name@example.com">
-    </div>
-    <div class="form-group">
-      <label for="phone">טלפון:</label>
-      <input type="tel" class="form-control" id="phone" placeholder="050-5555555">
-    </div>
-  </fieldset>
+      <div class="form-group" id="childData" ng-repeat="child in childArray">
+        <button type="button" class="close float-left" aria-label="Close" ng-click="removeChild(child.id)" data-toggle="tooltip"
+          data-placement="top" title="הורד ילד">
+          <span aria-hidden="true" style="font-size:20px">×</span>
+        </button>
+        <button type="button" class="close float-left px-2 " aria-label="Add" ng-click="addChild()" data-toggle="tooltip"
+          data-placement="top" title="הוסף ילד">
+          <span aria-hidden="true" style="font-size:20px">+</span>
+        </button>
+        
+          <label for="childName+{{child.id}}">שם הילד </label>
+          <input type="text" id="childName+{{child.id}}" min="5">
+          <label for="childAge+{{child.id}}">גיל </label>
+          <input class="inputNum" type="number" id="childAge+{{child.id}}" min="5">
+        
+      </div>
+
+      <div class="form-group">
+        <label for="fullName">שם&#160;מלא:</label>
+        <input type="text" class="form-control" id="fullName" placeholder="הקלד שם מלא">
+      </div>
+      <div class="form-group">
+        <label for="email">כתובת אימייל:</label>
+        <input type="email" class="form-control" id="email" ng-model="userEmail" value="userEmail" placeholder="name@example.com">
+      </div>
+      <div class="form-group">
+        <label for="phone">טלפון:</label>
+        <input type="tel" class="form-control" id="phone" placeholder="050-5555555">
+      </div>
+    </fieldset>
 
   </div>
   <button type="button" class="btn btn-outline-primary" ng-click="RegisterToWorkShop()">הרשם</button>

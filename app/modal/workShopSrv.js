@@ -7,15 +7,7 @@ app.factory("workShopSrv", function ($q, $http) {
         this.name = workShop.name;
         this.description = workShop.description;
         
-    }
-
-    function WorkShopRegistration(workShopRegistration){
-        this.numberOfChilds = workShopRegistration.numberOfChilds;
-        this.parentName = workShopRegistration.parentName;
-        this.parentPhone = workShopRegistration.parentPhone;
-        this.parentEmail = workShopRegistration.parentEmail;
-        this.selectedWorkShop = workShopRegistration.selectedWorkShop;
-    }
+    }   
 
     function getWorkShopOptions() {
         var async = $q.defer();
