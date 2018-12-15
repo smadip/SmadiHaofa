@@ -27,7 +27,7 @@ app.config(function ($routeProvider) {
         })
         .when("/userWorkShop", {
             templateUrl: "app/userWorkShop/userWorkShop.html",
-            controller: "workShopCtrl"
+            controller: "userWorkShopCtrl"
         })
 
         

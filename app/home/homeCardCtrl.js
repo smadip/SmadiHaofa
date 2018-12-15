@@ -3,7 +3,7 @@ app.controller("homeCardCtrl", function ($scope, homeCardSrv, userSrv, $routePar
     $scope.ruleId = userSrv.getUserRole();
 
     homeCardSrv.getHomeCardOptions($scope.ruleId).then(function (options) {
-        $scope.homeCards = options;
+        $scope.cards = options;
     }, function (error) {
 
     })

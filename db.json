@@ -33,18 +33,19 @@
     "workShops": [
         {
             "id": 1,
-            "name": "סדנה לכבוד השנה החדשה",
+            "name": "סדנת שמרים",
             "date": "01/01/19",
-            "description": "בסדנה זו ניצור קינוחים בריאים לכבוד השנה החדשה",
+            "description": "בסדנה זו נכיר את בצק השמרים ונכין מאפים מגוונים מבצק שמרים",
             "active":false,
-            "images":["","","",""]
+            "images":["assets/ws/ws_shmarim/1.jpg","assets/ws/ws_shmarim/2.jpg","assets/ws/ws_shmarim/3.jpg","assets/ws/ws_shmarim/4.jpg","assets/ws/ws_shmarim/5.jpg","assets/ws/ws_shmarim/6.jpg"]
         },
         {
             "id": 2,
-            "name": "סדנת טו בשבט",
+            "name": "סדנת פיצות",
             "date": "12/02/19",
-            "description": "בסדנה זו ניצור קינוחים חגיגיים לכבוד טו בשבט.",
-            "active":false
+            "description": "בסדנה זו פיצות בשלל סגנונות וטעמים ולקינוח נכין כדורי שוקולד על מקל.",
+            "active":false,
+            "images":["assets/ws/ws_pizza/1.jpg","assets/ws/ws_pizza/2.jpg","assets/ws/ws_pizza/3.jpg","assets/ws/ws_pizza/4.jpg","assets/ws/ws_pizza/5.jpg","assets/ws/ws_pizza/6.jpg","assets/ws/ws_pizza/7.jpg","assets/ws/ws_pizza/8.jpg"]
         },
         {
             "id": 2,
