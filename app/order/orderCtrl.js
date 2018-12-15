@@ -1,6 +1,5 @@
 app.controller("orderCtrl", function ($scope, orderSrv, userSrv) {
     $scope.order = orderSrv.getOrder();
-    $scope.setUserDetails();
     $scope.mailSent = false;
     $scope.sendPdf = function () {
         var element = document.getElementById('orderId');
@@ -16,6 +15,9 @@ app.controller("orderCtrl", function ($scope, orderSrv, userSrv) {
             $scope.phone = activeUser.phone;
         }
     }
+
+    $scope.setUserDetails();
+
     $scope.SendMail = function () {
 
         $scope.order.fullName = document.getElementById('fullName').value;

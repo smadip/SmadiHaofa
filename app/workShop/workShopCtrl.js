@@ -1,4 +1,4 @@
-app.controller("workShopCtrl", function ($scope, workShopSrv, workShopRegistrationSrv) {
+app.controller("workShopCtrl", function ($scope, workShopSrv, workShopRegistrationSrv,userSrv) {
     $scope.selectedWorkShop = null;
     $scope.mailSent = false;
     $scope.childArray = [];
@@ -14,6 +14,18 @@ app.controller("workShopCtrl", function ($scope, workShopSrv, workShopRegistrati
     }, function (error) {
 
     })
+
+    $scope.setUserDetails = function () {
+        var activeUser = userSrv.getActiveUser();
+        if (activeUser != null) {
+            $scope.userEmail = activeUser.email;
+            $scope.fullName = activeUser.fname + " " + activeUser.lname;
+            $scope.phone = activeUser.phone;
+        }
+    }
+
+    $scope.setUserDetails();
+
 
     $scope.addChild = function(){
         var newId = $scope.childArray[$scope.childArray.length-1].id+1;
