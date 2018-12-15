@@ -1,11 +1,21 @@
-app.controller("orderCtrl", function ($scope, orderSrv) {
+app.controller("orderCtrl", function ($scope, orderSrv, userSrv) {
     $scope.order = orderSrv.getOrder();
+    $scope.setUserDetails();
     $scope.mailSent = false;
     $scope.sendPdf = function () {
         var element = document.getElementById('orderId');
         orderSrv.createPdf(element);
     }
 
+
+    $scope.setUserDetails = function () {
+        var activeUser = userSrv.getActiveUser();
+        if (activeUser != null) {
+            $scope.userEmail = activeUser.email;
+            $scope.fullName = activeUser.fname + " " + activeUser.lname;
+            $scope.phone = activeUser.phone;
+        }
+    }
     $scope.SendMail = function () {
 
         $scope.order.fullName = document.getElementById('fullName').value;

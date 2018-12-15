@@ -5,14 +5,16 @@
             "fname": "סמדר",
             "lname": "בוכמן",
             "email": "smadiHaofa@gmail.com",
+            "phone":"0503347153",
             "pwd": "123",
             "roleId": "1"
         },
         {
             "id": 2,
             "fname": "מירב",
-            "lname": "לילה",
+            "lname": "תבורי",
             "email": "merav@gmail.com",
+            "phone":"0529987451",
             "pwd": "123",
             "roleId": "2"
         }

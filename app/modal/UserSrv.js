@@ -8,6 +8,7 @@ app.factory("userSrv", function ($q, $http) {
         this.fname = plainUser.fname;
         this.lname = plainUser.lname;
         this.email = plainUser.email;
+        this.phone = plainUser.phone;
         this.pwd = plainUser.pwd;
         this.roleId = plainUser.roleId;
     }
@@ -33,20 +34,8 @@ app.factory("userSrv", function ($q, $http) {
         return async.promise;
     }
 
-    function isRoleAllow(roleId) {
-        if (roleId == 3) return true;
-        if (roleId == 2) {
-            if (activeUser != null) {
-                if (activeUser.roleId == 2) return true;
-            }
-            return false;
-        }
-        if (roleId == 1) {
-            if (activeUser != null) {
-                if (activeUser.roleId == 1) return true;
-            }
-            return false;
-        }
+    function getActiveUser() {
+        return activeUser;
     }
 
     function getUserRole(){
@@ -86,7 +75,7 @@ app.factory("userSrv", function ($q, $http) {
         logout: logout,
         getActiveUser: getActiveUser,
         isAdminLoggedIn: isAdminLoggedIn,
-        getUserRole:getUserRole
-        // isRoleAllow:isRoleAllow
+        getUserRole:getUserRole,
+        getActiveUser:getActiveUser
     }
 })
