@@ -6,6 +6,7 @@ app.factory("workShopSrv", function ($q, $http) {
         this.date = workShop.date;
         this.name = workShop.name;
         this.description = workShop.description;
+        this.images = workShop.images;
         
     }   
 

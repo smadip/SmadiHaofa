@@ -36,7 +36,8 @@
             "name": "סדנה לכבוד השנה החדשה",
             "date": "01/01/19",
             "description": "בסדנה זו ניצור קינוחים בריאים לכבוד השנה החדשה",
-            "active":false
+            "active":false,
+            "images":["","","",""]
         },
         {
             "id": 2,
@@ -65,7 +66,7 @@
             "id": 1,
             "name": "סדנאות אפייה",
             "description": "הזמנת סדנאות אפייה פרטיות ליום הולדת, גיבוש או כל אירוע משמח",
-            "imgUrl": "assets/bakingWorkshops.jpg",
+            "imgUrl": "assets/homeCards/bakingWorkshops.jpg",
             "pageLink": "#!/workShop",
             "roleId": "3"
         },
@@ -73,7 +74,7 @@
             "id": 2,
             "name": "עוגות מעוצבות",
             "description": "עוגות מעוצבות לפי הזמנה אישית",
-            "imgUrl": "assets/designCake.jpg",
+            "imgUrl": "assets/homeCards/designCake.jpg",
             "pageLink": "#",
             "roleId": "3"
         },
@@ -81,7 +82,7 @@
             "id": 3,
             "name": "ממאפים מתוקים ולמלוחים",
             "description": "הזמנת קינוחים ומאפים לכל אירוע",
-            "imgUrl": "assets/specialOrder.JPG",
+            "imgUrl": "assets/homeCards/specialOrder.JPG",
             "pageLink": "#!/foodOrder",
             "roleId": "3"
         },
@@ -89,7 +90,7 @@
             "id": 3,
             "name": "ניהול משתמשים",
             "description": "ניהול משתמשי המערכת",
-            "imgUrl": "assets/specialOrder.JPG",
+            "imgUrl": "assets/homeCards/users.jpg",
             "pageLink": "#!/foodOrder",
             "roleId": "1"
         },
@@ -97,7 +98,7 @@
             "id": 3,
             "name": "הסדנאות שלי",
             "description": "צפייה בסדנאות שהשתתפתי בהן",
-            "imgUrl": "assets/specialOrder.JPG",
+            "imgUrl": "assets/homeCards/myWS.jpg",
             "pageLink": "#!/foodOrder",
             "roleId": "2"
         }
