@@ -11,6 +11,7 @@ app.factory("userSrv", function ($q, $http) {
         this.phone = plainUser.phone;
         this.pwd = plainUser.pwd;
         this.roleId = plainUser.roleId;
+        this.workShopList = plainUser.workShopList;
     }
 
     function login(email, pwd) {

@@ -8,13 +8,13 @@ app.factory("workShopSrv", function ($q, $http) {
         this.description = workShop.description;
         this.images = workShop.images;
         
-    }   
-
-    function getWorkShopOptions() {
+    }  
+    
+    function getWorkShopOptions(status) {
         var async = $q.defer();
         var workShops = [];
 
-        var getWorkShopURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/workShops?active=true";
+        var getWorkShopURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/workShops?active="+status;
 
         $http.get(getWorkShopURL).then(function (response) {
             for (var i = 0; i < response.data.length; i++) {

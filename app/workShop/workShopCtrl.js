@@ -9,7 +9,7 @@ app.controller("workShopCtrl", function ($scope, workShopSrv, workShopRegistrati
     }
 
 
-    workShopSrv.getWorkShopOptions().then(function (options) {
+    workShopSrv.getWorkShopOptions(true).then(function (options) {
         $scope.workShops = options;
     }, function (error) {
 

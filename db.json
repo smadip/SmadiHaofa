@@ -91,7 +91,7 @@
             "name": "ניהול משתמשים",
             "description": "ניהול משתמשי המערכת",
             "imgUrl": "assets/homeCards/users.jpg",
-            "pageLink": "#!/foodOrder",
+            "pageLink": "#!/",
             "roleId": "1"
         },
         {
@@ -99,7 +99,7 @@
             "name": "הסדנאות שלי",
             "description": "צפייה בסדנאות שהשתתפתי בהן",
             "imgUrl": "assets/homeCards/myWS.jpg",
-            "pageLink": "#!/foodOrder",
+            "pageLink": "#!/userWorkShop",
             "roleId": "2"
         }
     ],
