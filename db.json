@@ -16,7 +16,18 @@
             "email": "merav@gmail.com",
             "phone":"0529987451",
             "pwd": "123",
-            "roleId": "2"
+            "roleId": "2",
+            "workShopList":[1,2]
+        },
+        {
+            "id": 3,
+            "fname": "שני",
+            "lname": "ציון",
+            "email": "shani@gmail.com",
+            "phone":"0532222444",
+            "pwd": "123",
+            "roleId": "2",
+            "workShopList":[1]
         }
     ],
     "workShops": [
