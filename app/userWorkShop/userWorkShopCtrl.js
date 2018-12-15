@@ -1,7 +1,7 @@
 app.controller("userWorkShopCtrl", function ($scope, userSrv, workShopSrv) {
 
+    $scope.selectedCard = workShopSrv.getSelectedUserCard();
     $scope.cards = [];
-
     $scope.getUserWorkShop = function () {
 
         $scope.activeUser = userSrv.getActiveUser();
@@ -14,7 +14,8 @@ app.controller("userWorkShopCtrl", function ($scope, userSrv, workShopSrv) {
 
                 workShops.forEach(ws => {
                     if (workShopList.includes(ws.id)) {
-                        ws.imgUrl = ws.images[0];
+                        ws.imgUrl = ws.images[1];
+                        ws.pageLink = "#!/userWorkShopDetails"
                         $scope.cards.push(ws);
                     }
 
@@ -22,8 +23,11 @@ app.controller("userWorkShopCtrl", function ($scope, userSrv, workShopSrv) {
             }, function (error) {
 
             })
-
         }
+    }
+
+    $scope.cardSelected = function (card) {
+        workShopSrv.setSelectedUserCard(card);
     }
 
     $scope.getUserWorkShop();

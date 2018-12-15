@@ -1,5 +1,6 @@
 app.factory("workShopSrv", function ($q, $http) {
 
+    var selectedUserCard = null;
 
     function WorkShop(workShop) {
         this.id = workShop.id;
@@ -7,14 +8,14 @@ app.factory("workShopSrv", function ($q, $http) {
         this.name = workShop.name;
         this.description = workShop.description;
         this.images = workShop.images;
-        
-    }  
-    
+
+    }
+
     function getWorkShopOptions(status) {
         var async = $q.defer();
         var workShops = [];
 
-        var getWorkShopURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/workShops?active="+status;
+        var getWorkShopURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/workShops?active=" + status;
 
         $http.get(getWorkShopURL).then(function (response) {
             for (var i = 0; i < response.data.length; i++) {
@@ -28,7 +29,7 @@ app.factory("workShopSrv", function ($q, $http) {
         return async.promise;
     }
 
-    function createPdf (orderElement) {
+    function createPdf(orderElement) {
         var opt = {
             margin: 1,
             filename: 'myOrder.pdf',
@@ -42,8 +43,18 @@ app.factory("workShopSrv", function ($q, $http) {
         // var worker = html2pdf().from(element).toPdf().save("sdsd");
     }
 
+    function setSelectedUserCard(card) {
+        selectedUserCard = card;
+    }
+
+    function getSelectedUserCard() {
+        return selectedUserCard;
+    }
+
     return {
         getWorkShopOptions: getWorkShopOptions,
-        createPdf:createPdf
+        createPdf: createPdf,
+        getSelectedUserCard: getSelectedUserCard,
+        setSelectedUserCard: setSelectedUserCard
     }
 })

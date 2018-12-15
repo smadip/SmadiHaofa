@@ -1,0 +1,33 @@
+<div class="container">
+
+    <fieldset class="form-group scheduler-border">
+        <legend class="scheduler-border">פרטי&#160;הסדנה</legend>
+
+        <div class="form-group">
+            <label for="remark">שם הסדנה:</label>
+            <input type="text" class="form-control" id="name" value="{{selectedCard.name}}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="remark">פירוט תוכן הסדנה:</label>
+            <textarea class="form-control" id="remark" rows="3" readonly> {{selectedCard.description}}</textarea>
+        </div>
+    </fieldset>
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item" ng-repeat="img in selectedCard.images">
+                <img class="d-block w-100" src="{{img}}" alt="First slide" >
+            </div>            
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    </fieldset>
+</div>
