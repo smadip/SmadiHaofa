@@ -10,19 +10,27 @@ app.factory("homeCardSrv", function ($q, $http) {
         this.roleId = homeCard.roleId;
     }
 
-    function getHomeCardOptions() {
+    function getHomeCardOptions(ruleId) {
         var async = $q.defer();
         var homeCards = [];
-
-        var getHomeCardsURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/homeCards";
+        var getHomeCardsURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/homeCards?roleId=" + ruleId;
 
         $http.get(getHomeCardsURL).then(function (response) {
+            var homeCards = [];
             for (var i = 0; i < response.data.length; i++) {
                 var homeCard = new HomeCard(response.data[i]);
                 homeCards.push(homeCard);
             }
+            if (ruleId == 2) {
+                var getHomeCardsURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/homeCards?roleId=" + 3;
+                $http.get(getHomeCardsURL).then(function (response) {
+                    for (var i = 0; i < response.data.length; i++) {
+                        var homeCard = new HomeCard(response.data[i]);
+                        homeCards.push(homeCard);
+                    }
+                })
+            }
 
-            
             async.resolve(homeCards);
         }, function (error) {
             async.reject(error);

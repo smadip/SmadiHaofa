@@ -49,6 +49,20 @@ app.factory("userSrv", function ($q, $http) {
         }
     }
 
+    function getUserRole(){
+        if(isLoggedIn()){
+            if(isAdminLoggedIn()){
+                return 1;
+            }
+            else{
+                return 2;
+            }
+        }
+        else{
+            return 3;
+        }
+    }
+
     function isLoggedIn() {
         return activeUser ? true : false;
     }
@@ -72,6 +86,7 @@ app.factory("userSrv", function ($q, $http) {
         logout: logout,
         getActiveUser: getActiveUser,
         isAdminLoggedIn: isAdminLoggedIn,
-        isRoleAllow:isRoleAllow
+        getUserRole:getUserRole
+        // isRoleAllow:isRoleAllow
     }
 })
