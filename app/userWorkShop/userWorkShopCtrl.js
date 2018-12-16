@@ -1,5 +1,7 @@
 app.controller("userWorkShopCtrl", function ($scope, userSrv, workShopSrv) {
 
+  $scope.activeIndex = 0;
+  
     $scope.selectedCard = workShopSrv.getSelectedUserCard();
     $scope.cards = [];
     $scope.getUserWorkShop = function () {
@@ -22,9 +24,9 @@ app.controller("userWorkShopCtrl", function ($scope, userSrv, workShopSrv) {
 
                 });
 
-                for (var i=0; i<4; i++) {
-                    $scope.addSlide(i);
-                  }
+                // for (var i=0; i<4; i++) {
+                //     $scope.addSlide(i);
+                //   }
                   
             }, function (error) {
 
@@ -38,44 +40,63 @@ app.controller("userWorkShopCtrl", function ($scope, userSrv, workShopSrv) {
 
     $scope.getUserWorkShop();
 
-    var slides = $scope.slides = [];
-    $scope.addSlide = function(i) {
-      var newWidth = 600 + slides.length + 1;
-      slides.push({
-        image: $scope.selectedCard.images[i].imgUrl + newWidth + '/300',
-        text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
-          ['Cats', 'Kittens', 'Felines', 'Cuties'][slides.length % 4]
-      });
-    };
-    
-    
-    $scope.getActiveSlide = function () {
-      var activeSlide = slides.filter(function (s) { 
-        return s.active;
-      })[0];
-      
-      alert(slides.indexOf(activeSlide));
-      
-    };
-  
-    $scope.setActiveSlide = function (idx) {
-      $scope.slides[idx].active=true;
-    };
-    
-  });
-  
-  
-  app.directive('carouselControls', function() {
-    return {
-      restrict: 'A',
-      link: function (scope, element, attrs) {
-        scope.goNext = function() {
-          element.isolateScope().next();
-        };
-        scope.goPrev = function() {
-          element.isolateScope().prev();
-        };
-        
+    $scope.nextImg = function(activeIndex, propImages) {
+      if (activeIndex === propImages.length -1) {
+        $scope.activeIndex = 0;
       }
-    };
+      else{
+        $scope.activeIndex +=1;
+      }
+    
+  };
+
+  $scope.prevImg = function(activeIndex, propImages) {
+    if (activeIndex === 0) {
+      $scope.activeIndex = propImages.length -1;
+    }
+    else{
+      $scope.activeIndex -=1;
+    }
+  }
+
+    // var slides = $scope.slides = [];
+    // $scope.addSlide = function(i) {
+    //   var newWidth = 600 + slides.length + 1;
+    //   slides.push({
+    //     image: $scope.selectedCard.images[i].imgUrl,
+    //     text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
+    //       ['Cats', 'Kittens', 'Felines', 'Cuties'][slides.length % 4]
+    //   });
+    // };
+    
+    
+    // $scope.getActiveSlide = function () {
+    //   var activeSlide = slides.filter(function (s) { 
+    //     return s.active;
+    //   })[0];
+      
+    //   alert(slides.indexOf(activeSlide));
+      
+    // };
+  
+    // $scope.setActiveSlide = function (idx) {
+    //   $scope.slides[idx].active=true;
+    // };
+    
   });
+  
+  
+  // app.directive('carouselControls', function() {
+  //   return {
+  //     restrict: 'A',
+  //     link: function (scope, element, attrs) {
+  //       scope.goNext = function() {
+  //         element.isolateScope().next();
+  //       };
+  //       scope.goPrev = function() {
+  //         element.isolateScope().prev();
+  //       };
+        
+  //     }
+  //   };
+  // });

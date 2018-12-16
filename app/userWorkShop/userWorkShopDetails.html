@@ -13,7 +13,27 @@
         </div>
     </fieldset>
 
-    <h1>Carousel Demo</h1>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" ng-class="{'active' : activeIndex===selectedCard.images.indexOf(propImage)}" ng-repeat="propImage in selectedCard.images"></li>   
+        </ul>
+        <!-- The slideshow/carousel to show the property images -->
+        <div class="carousel-inner">
+            <div class="carousel-item" ng-class="{'active' : activeIndex===selectedCard.images.indexOf(propImage)}" ng-repeat="propImage in selectedCard.images">
+                <img class="thumb-post" src="{{propImage}}" alt="pic1" >
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev"  data-slide="prev" ng-click = "prevImg(activeIndex, selectedCard.images)">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next"  data-slide="next" ng-click = "nextImg(activeIndex, selectedCard.images)">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div> 
+</div>
+    <!-- <h1>Carousel Demo</h1>
     <div ng-controller="CarouselDemoCtrl">
       <carousel carousel-controls interval="5000">
         <slide ng-repeat="slide in slides" active="slide.active">
@@ -33,7 +53,7 @@
         <button class="btn btn-primary" ng-click="goPrev()">Previous</button>
         <button class="btn btn-primary" ng-click="goNext()">Next</button>
       </div>
-    </div>
+    </div> -->
     <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item" ng-class="{active:!$index}" ng-repeat="img in selectedCard.images">

@@ -15,7 +15,7 @@ app.factory("workShopSrv", function ($q, $http) {
         var async = $q.defer();
         var workShops = [];
 
-        var getWorkShopURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/workShops?active=" + status;
+        var getWorkShopURL = "https://my-json-server.typicode.com/smadip/SmadiHaofa/workShops?active=" + status;
 
         $http.get(getWorkShopURL).then(function (response) {
             for (var i = 0; i < response.data.length; i++) {

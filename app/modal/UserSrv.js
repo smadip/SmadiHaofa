@@ -17,7 +17,7 @@ app.factory("userSrv", function ($q, $http) {
     function login(email, pwd) {
         var async = $q.defer();
 
-        var loginURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/users?email=" +
+        var loginURL = "https://my-json-server.typicode.com/smadip/SmadiHaofa/users?email=" +
             email + "&pwd=" + pwd;
         $http.get(loginURL).then(function (response) {
             if (response.data.length > 0) {
