@@ -13,7 +13,7 @@ app.factory("homeCardSrv", function ($q, $http) {
     function getHomeCardOptions(ruleId) {
         var async = $q.defer();
         var homeCards = [];
-        var getHomeCardsURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/homeCards?roleId=" + ruleId;
+        var getHomeCardsURL = "https://my-json-server.typicode.com/smadip/SmadiHaofa/homeCards?roleId=" + ruleId;
 
         $http.get(getHomeCardsURL).then(function (response) {
             var homeCards = [];
@@ -22,7 +22,7 @@ app.factory("homeCardSrv", function ($q, $http) {
                 homeCards.push(homeCard);
             }
             if (ruleId == 2) {
-                var getHomeCardsURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/homeCards?roleId=" + 3;
+                var getHomeCardsURL = "https://my-json-server.typicode.com/smadip/SmadiHaofa/homeCards?roleId=" + 3;
                 $http.get(getHomeCardsURL).then(function (response) {
                     for (var i = 0; i < response.data.length; i++) {
                         var homeCard = new HomeCard(response.data[i]);
