@@ -149,7 +149,7 @@
                     "imgUrl": "assets/foodRes/kish_Sheri.jpg"
                 },
                 {
-                    "id": 2,
+                    "id": 3,
                     "name": "קיש בטטה",
                     "description": "קיש מבצק פריך ואיכותי ממולא בקרם שמנת ובטטה",
                     "price": 20,
@@ -166,7 +166,7 @@
             "idName": "b",
             "foodOptions": [
                 {
-                    "id": 3,
+                    "id": 4,
                     "name": "מארז של 6 יחידות פאי שוקולד אישי",
                     "description": "פאי בצק פריך ממולא בגאנש שוקולד עם 60% מוצקי קקאו",
                     "price": 30,
@@ -174,7 +174,7 @@
                     "imgUrl": "assets/foodRes/paiCho.jpg"
                 },
                 {
-                    "id": 4,
+                    "id": 5,
                     "name": "מארז של 10 פטיפורים",
                     "description": "פטיפורים במילואים שונים ומטריפים",
                     "price": 40,
@@ -182,7 +182,7 @@
                     "imgUrl": "assets/foodRes/patifurs.jpg"
                 },
                 {
-                    "id": 4,
+                    "id": 6,
                     "name": "מארז פרלינים",
                     "description": "מארז פרלינים במיללואים שונים",
                     "price": 40,
@@ -199,20 +199,20 @@
             "idName": "c",
             "foodOptions": [
                 {
-                    "id": 5,
+                    "id": 7,
                     "name": "עוגת טריקולד",
                     "description": "עוגת מוס 3 שכבות",
                     "price": 50,
                     "foodTypeId": "3",
-                    "imgUrl": "assets/trikolad.jpg"
+                    "imgUrl": "assets/foodRes/trikolad.jpg"
                 },
                 {
-                    "id": 6,
+                    "id": 8,
                     "name": "עוגת בנופי",
                     "description": "עוגת קרם שמנת בננות ושכבת טופי",
                     "price": 60,
                     "foodTypeId": "3",
-                    "imgUrl": "assets/foodRes/foodRes/banufi.jpg"
+                    "imgUrl": "assets/foodRes/banufi.jpg"
                 }
             ]
         },
