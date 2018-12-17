@@ -83,7 +83,7 @@
             "id": 3,
             "name": "ממאפים מתוקים ולמלוחים",
             "description": "הזמנת קינוחים ומאפים לכל אירוע",
-            "imgUrl": "assets/homeCards/specialOrder.JPG",
+            "imgUrl": "assets/homeCards/specialOrder.jpg",
             "pageLink": "#!/foodOrder",
             "roleId": "3"
         },
