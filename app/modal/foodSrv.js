@@ -18,7 +18,7 @@ app.factory("foodSrv", function ($q, $http) {
         var async = $q.defer();
         var foods = [];
 
-        var getFoodsURL = "http://my-json-server.typicode.com/smadip/SmadiHaofa/food";
+        var getFoodsURL = "https://my-json-server.typicode.com/smadip/SmadiHaofa/food";
 
         $http.get(getFoodsURL).then(function (response) {
             for (var i = 0; i < response.data.length; i++) {
