@@ -1,10 +1,22 @@
 app.controller("orderCtrl", function ($scope, orderSrv, userSrv) {
     $scope.order = orderSrv.getOrder();
+
+    $scope.setTotalAmount = function(){
+        var total = 0;
+        $scope.order.foodOrder.forEach(food => {
+            total+=food.totalPrice;
+        });
+        return total;
+    }
+
+    $scope.totalAmount = $scope.setTotalAmount();
     $scope.mailSent = false;
     $scope.sendPdf = function () {
         var element = document.getElementById('orderId');
         orderSrv.createPdf(element);
     }
+
+   
 
 
     $scope.setUserDetails = function () {
@@ -12,7 +24,7 @@ app.controller("orderCtrl", function ($scope, orderSrv, userSrv) {
         if (activeUser != null) {
             $scope.userEmail = activeUser.email;
             $scope.fullName = activeUser.fname + " " + activeUser.lname;
-            $scope.phone = activeUser.phone;
+            $scope.phone = activeUser.phone;           
         }
     }
 
@@ -25,10 +37,6 @@ app.controller("orderCtrl", function ($scope, orderSrv, userSrv) {
         $scope.order.email = document.getElementById('email').value;
         $scope.order.remarkData = document.getElementById('remark').value;
         $scope.order.date = document.getElementById('orderDate').value;
-
-
-        // var element = document.getElementById('orderId');        
-        // orderSrv.createPdf(element);
 
         orderSrv.sendEmail($scope.order);
         $scope.mailSent = true;
