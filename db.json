@@ -96,7 +96,15 @@
             "roleId": "1"
         },
         {
-            "id": 3,
+            "id": 4,
+            "name": "ניהול סדנאות",
+            "description": "ניהול הסדנאות במערכת",
+            "imgUrl": "assets/homeCards/manageWs.jpg",
+            "pageLink": "#!/",
+            "roleId": "1"
+        },
+        {
+            "id": 5,
             "name": "הסדנאות שלי",
             "description": "צפייה בסדנאות שהשתתפתי בהן",
             "imgUrl": "assets/homeCards/myWS.jpg",
