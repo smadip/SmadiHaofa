@@ -227,7 +227,7 @@
                     "description": "עוגיות בצק פריך מגולגלות וממולאות בממרח תמרים",
                     "price": 70,
                     "foodTypeId": "4",
-                    "imgUrl": "assets/designCake.jpg"
+                    "imgUrl": "assets/foodRes/tamar.jpg"
                 },
                 {
                     "id": 8,
@@ -235,7 +235,7 @@
                     "description": "עוגיות בצק פריך ממולאות בריבת תות איכותית ",
                     "price": 80,
                     "foodTypeId": "4",
-                    "imgUrl": "assets/designCake.jpg"
+                    "imgUrl": "assets/foodRes/riba.jpg"
                 }
             ]
         }
